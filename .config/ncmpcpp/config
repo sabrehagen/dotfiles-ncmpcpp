@@ -1,24 +1,24 @@
 ncmpcpp_directory  = ~/.config/ncmpcpp
 lyrics_directory  = ~/.cache/ncmpcpp/lyrics
-mpd_host = "localhost"
-mpd_port = "6600"
+mpd_host = localhost
+mpd_port = 6600
 mpd_connection_timeout = 5
 mpd_crossfade_time = 5
-mpd_music_dir = "~/music"
+mpd_music_dir = ~/music
 audio_output {
-        type            "my_fifo"
-        name            "Visualizer feed"
-        path            "/tmp/mpd.fifo"
-        format          "44100:16:2"
+        type            my_fifo
+        name            Visualizer feed
+        path            /tmp/mpd.fifo
+        format          44100:16:2
 ## }
 visualizer_data_source = /tmp/mpd.fifo
 visualizer_output_name = Visualizer feed
 visualizer_type = wave
 visualizer_look = "●┃"
 visualizer_in_stereo = yes
-system_encoding = "utf-8"
-playlist_disable_highlight_delay = "0"
-playlist_show_remaining_time = "yes"
+system_encoding = utf-8
+playlist_disable_highlight_delay = 0
+playlist_show_remaining_time = yes
 message_delay_time = 5
 
 #song_list_format = "{$3%n │ $9}{$7%a - $9}{$5%t$9}|{$8%f$9}$R{$6 │ %b$9}{$3 │ %l$9}"
@@ -43,12 +43,12 @@ song_columns_list_format = "(10)[white]{l} (30)[white]{b} (25)[cyan]{a} (10)[mag
 
 execute_on_song_change = notify-send "Now Playing" "$(mpc current)"
 
-playlist_display_mode = "columns"
-browser_display_mode = "columns"
+playlist_display_mode = columns
+browser_display_mode = columns
 
-discard_colors_if_item_is_selected = "no"
-incremental_seeking = "yes"
-seek_time = "1"
+discard_colors_if_item_is_selected = no
+incremental_seeking = yes
+seek_time = 5
 autocenter_mode = yes
 centered_cursor = yes
 
@@ -71,38 +71,38 @@ progressbar_look = "▁▁▁"
 #progressbar_look = "─╼ "
 #progressbar_boldness = yes
 
-user_interface = "alternative"
-#user_interface = "classic"
+user_interface = alternative
+#user_interface = classic
 
 header_visibility = no
 statusbar_visibility = yes
 titles_visibility = yes
 header_text_scrolling = yes
-display_volume_level = "yes"
-display_bitrate = "no"
+display_volume_level = yes
+display_bitrate = no
 
 # Cycle through these screens when pressing tab.
 screen_switcher_mode = playlist, browser, search_engine, playlist_editor, media_library, tag_editor, lyrics
 
 search_engine_default_search_mode = 2
-external_editor = "/usr/bin/vim"
+external_editor = /usr/bin/nano
 
 ## Note: set to yes if external editor is a console application.
 ##
 use_console_editor = yes
 
-follow_now_playing_lyrics = "yes"
+follow_now_playing_lyrics = yes
 
-default_place_to_search_in = "database"
+default_place_to_search_in = database
 
 lyrics_fetchers = genius
 
 ## Navigation ##
-cyclic_scrolling = "yes"
-jump_to_now_playing_song_at_start = "yes"
-lines_scrolled = "2"
-#fancy_scrolling = "yes"
-regular_expressions = "extended"
+cyclic_scrolling = yes
+jump_to_now_playing_song_at_start = yes
+lines_scrolled = 2
+#fancy_scrolling = yes
+regular_expressions = extended
 
 #progressbar_boldness = "yes"
 #progressbar_elapsed_color = "white"
@@ -125,5 +125,5 @@ window_border_color = black
 active_window_border = green
 
 # enable_window_title = "no"
-ignore_leading_the = "yes"
+ignore_leading_the = yes
 empty_tag_marker = ""
