@@ -1,22 +1,21 @@
-ncmpcpp_directory  = ~/.ncmpcpp
-lyrics_directory  = ~/.ncmpcpp/lyrics
+ncmpcpp_directory  = ~/.config/ncmpcpp
+lyrics_directory  = ~/.cache/ncmpcpp/lyrics
 mpd_host = "localhost"
 mpd_port = "6600"
 mpd_connection_timeout = 5
 mpd_crossfade_time = 5
-mpd_music_dir = "/home/jackson/cloudstorage/onedrive"
+mpd_music_dir = "~/music"
 audio_output {
         type            "my_fifo"
         name            "Visualizer feed"
         path            "/tmp/mpd.fifo"
         format          "44100:16:2"
 ## }
-visualizer_fifo_path = "/tmp/mpd.fifo"
-visualizer_output_name = "my_fifo"
-visualizer_sync_interval = "12"
-visualizer_type = "spectrum" (spectrum/wave)
+visualizer_data_source = /tmp/mpd.fifo
+visualizer_output_name = Visualizer feed
+visualizer_type = wave
 visualizer_look = "●┃"
-visualizer_in_stereo = "yes"
+visualizer_in_stereo = yes
 system_encoding = "utf-8"
 playlist_disable_highlight_delay = "0"
 playlist_show_remaining_time = "yes"
@@ -42,7 +41,7 @@ browser_sort_format = {%a - }{%t}|{%f} {(%l)}
 #song_columns_list_format = "(10)[blue]{l} (30)[green]{a} (30)[magenta]{b} (50)[yellow]{t}"
 song_columns_list_format = "(10)[white]{l} (30)[white]{b} (25)[cyan]{a} (10)[magenta]{t}"
 
-execute_on_song_change = notify-send "Now Playing ♫" "$(mpc current)"
+execute_on_song_change = notify-send "Now Playing" "$(mpc current)"
 
 playlist_display_mode = "columns"
 browser_display_mode = "columns"
@@ -82,6 +81,9 @@ header_text_scrolling = yes
 display_volume_level = "yes"
 display_bitrate = "no"
 
+# Cycle through these screens when pressing tab.
+screen_switcher_mode = playlist, browser, search_engine, playlist_editor, media_library, tag_editor, lyrics
+
 search_engine_default_search_mode = 2
 external_editor = "/usr/bin/vim"
 
@@ -93,7 +95,7 @@ follow_now_playing_lyrics = "yes"
 
 default_place_to_search_in = "database"
 
-lyrics_fetchers = lyricwiki, azlyrics, genius, sing365, lyricsmania, metrolyrics, justsomelyrics, jahlyrics, plyrics, tekstowo, internet
+lyrics_fetchers = genius
 
 ## Navigation ##
 cyclic_scrolling = "yes"
