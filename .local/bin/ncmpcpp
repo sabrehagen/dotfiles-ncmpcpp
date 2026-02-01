@@ -1,1 +1,1 @@
-/usr/bin/ncmpcpp 2>/dev/null
+exec /usr/bin/ncmpcpp 2>/dev/null
